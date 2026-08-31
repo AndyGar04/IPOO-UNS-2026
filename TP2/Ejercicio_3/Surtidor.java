@@ -34,21 +34,21 @@ public class Surtidor {
         cantPremium = maximaCarga;
     }
     public void extraerGasoil(int litros){
-        if (litros > cantGasoil){
+        if (cantGasoil > litros){
             cantGasoil = cantGasoil - litros;
         }else{
             cantGasoil = 0;
         }
     }
     public void extraerSuper(int litros){
-        if (litros > cantSuper){
+        if ( cantSuper > litros){
             cantSuper = cantSuper - litros;
         }else{
             cantSuper = 0;
         }
     }
     public void extraerPremium(int litros){
-        if (litros > cantPremium){
+        if (cantPremium > litros){
             cantPremium = cantPremium - litros;
         }else{
             cantPremium = 0;
@@ -71,7 +71,7 @@ public class Surtidor {
     public boolean depositosLlenos(){
         boolean aux;
 
-        if (cantGasoil == 2000 && cantSuper == 2000 && cantPremium == 2000){
+        if (cantGasoil == 20000 && cantSuper == 20000 && cantPremium == 20000){
             aux = true;
         }else{
             aux = false;
