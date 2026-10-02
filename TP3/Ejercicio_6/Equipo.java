@@ -110,12 +110,14 @@ public class Equipo {
         return "Nombre: " + nombre + "\nCapitan: " + capitan.obtenerNombre() + "\nPartidos Ganados: " + pG + "\nPartidos Empatados: " + pE + "\nPartidos Perdidos: " + pP + "\nGoles a Favor: " + gFavor + "\nGoles en Contra: " + gContra;
     }
 
+    // equals(e:Equipo): boolean. Si e no está ligado retorna false, se implementa superficial. 
+
     public boolean equals(Equipo e){
-        boolean sonIguales = false;
-        if (this.nombre.equals(e.nombre) && this.capitan.equals(e.capitan) && this.pG == e.pG && this.pE == e.pE && this.pP == e.pP && this.gFavor == e.gFavor && this.gContra == e.gContra){
-            sonIguales = true;
+        boolean iguales = false;
+        if (e != null){
+            iguales = this.nombre.equals(e.nombre) && this.capitan.equals(e.capitan) && this.pG == e.pG && this.pE == e.pE && this.pP == e.pP && this.gFavor == e.gFavor && this.gContra == e.gContra;
         }
-        return sonIguales;
+        return iguales;
     }
     // <<Comandos>>
     /*
@@ -152,6 +154,12 @@ public class Equipo {
         if (total >= 0 && delCap >= 0){
             gFavor =+ total;
             capitan.aumentarGoles(delCap); 
+        }
+    }
+
+    public void aumentarGcontra(int total){
+        if (total >= 0){
+            gContra =+ total;
         }
     }
 
