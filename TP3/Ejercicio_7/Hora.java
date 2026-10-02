@@ -50,24 +50,60 @@ public class Hora {
         return min;
     }
 
-
     /* 
         • diferenciaMinutos(c: Hora): entero. Retorna la diferencia calculada en minutos entre la hora y
         minutos del objeto que recibe el mensaje y la hora y minutos del parámetro c.  
     */
 
-    /*public int diferenciaMinutos(c: Hora){
-        int diferencia=0;
-        if ()
+    public int diferenciaMinutos(Hora c){
+        int diferencia = -1;
+        int minutosACalcular, horaACalcular;
+        if (c.obtenerHora() >= this.obtenerHora()){
+            horaACalcular = c.obtenerHora() - this.obtenerHora();
+        }else{
+            horaACalcular = this.obtenerHora() - c.obtenerHora();
+        }
+        if (c.obtenerMinutos() >= this.obtenerMinutos()){
+            minutosACalcular = c.obtenerHora() - this.obtenerMinutos();
+        }else {
+            minutosACalcular = this.obtenerMinutos() - c.obtenerMinutos();
+        }
+        diferencia = horaACalcular * 60 + minutosACalcular;
 
-        return
-    }*/
+        return diferencia;
+    }
 
     /*
         • anterior(c: Hora): boolean. Retorna true si el objeto que recibe el mensaje representa una hora
         anterior al parámetro c.
-        • equals(c: Hora): boolean. Requiere c ligado
     */
 
+    public boolean anteriro(Hora c){
+        boolean esAnterior = false;
+        if (c.obtenerHora() == this.obtenerHora()){
+            if (c.obtenerMinutos() > this.obtenerMinutos()){
+                esAnterior = true;
+            }else{
+                esAnterior = false;
+            }
+        }else if(c.obtenerHora() > this.obtenerHora()){
+            esAnterior = true;
+        }else{
+            esAnterior = false;
+        }
+
+        return esAnterior;
+    }
+
+    /*
+        • equals(c: Hora): boolean. Requiere c ligado 
+    */
+    public boolean equals(Hora c){
+        boolean esIgual=false;
+        if (c.obtenerHora() == this.obtenerHora() && c.obtenerMinutos() == obtenerMinutos()){
+            esIgual=true;
+        }
+        return esIgual;
+    }
 
 }
