@@ -1,4 +1,4 @@
-package TP3.Ejercicio_7;
+package TP3.Ejercicio_8;
 
 public class Tarifa {
     //<<Atributos de instancia>>

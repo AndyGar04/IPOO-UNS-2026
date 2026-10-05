@@ -1,4 +1,4 @@
-package TP3.Ejercicio_7;
+package TP3.Ejercicio_8;
 
 public class Vehiculo {
     //<<Atributos de Instancia>>
@@ -79,7 +79,7 @@ public class Vehiculo {
     */
     public boolean anterior(Vehiculo v){
         boolean esAnterior = false;
-        if (obtenerIngreso().anteriro(v.obtenerIngreso())){
+        if (obtenerIngreso().anterior(v.obtenerIngreso())){
             esAnterior = true;
         }
         return esAnterior;
@@ -98,4 +98,13 @@ public class Vehiculo {
         return esIgual;
     }
 
+    public void copy(Vehiculo v){
+        if (egreso != null) {
+            numero = v.obtenerNumero();
+            patente = v.obtenerPatente();
+            
+            ingreso.copy(v.obtenerIngreso());
+            egreso.copy(v.obtenerEgreso());
+        }
+    }
 }

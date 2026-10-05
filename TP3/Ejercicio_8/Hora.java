@@ -1,4 +1,4 @@
-package TP3.Ejercicio_7;
+package TP3.Ejercicio_8;
 
 public class Hora {
 
@@ -33,7 +33,7 @@ public class Hora {
         }else if(c > 59){
             min = 59;
         }else{
-            hor = c;
+            min = c;
         }
     }
 
@@ -56,20 +56,15 @@ public class Hora {
     */
 
     public int diferenciaMinutos(Hora c){
-        int diferencia = -1;
-        int minutosACalcular, horaACalcular;
-        if (c.obtenerHora() >= this.obtenerHora()){
-            horaACalcular = c.obtenerHora() - this.obtenerHora();
-        }else{
-            horaACalcular = this.obtenerHora() - c.obtenerHora();
+        int minutosPropios = (hor * 60) + this.min;
+        int minutosParametro = (c.obtenerHora() * 60) + c.obtenerMinutos();
+        
+        int diferencia = minutosPropios - minutosParametro;
+        
+        if (diferencia < 0) {
+            diferencia = diferencia * -1;
         }
-        if (c.obtenerMinutos() >= this.obtenerMinutos()){
-            minutosACalcular = c.obtenerHora() - this.obtenerMinutos();
-        }else {
-            minutosACalcular = this.obtenerMinutos() - c.obtenerMinutos();
-        }
-        diferencia = horaACalcular * 60 + minutosACalcular;
-
+        
         return diferencia;
     }
 
@@ -78,15 +73,15 @@ public class Hora {
         anterior al parámetro c.
     */
 
-    public boolean anteriro(Hora c){
+    public boolean anterior(Hora c){
         boolean esAnterior = false;
-        if (c.obtenerHora() == this.obtenerHora()){
-            if (c.obtenerMinutos() > this.obtenerMinutos()){
+        if (c.obtenerHora() == obtenerHora()){
+            if (c.obtenerMinutos() > obtenerMinutos()){
                 esAnterior = true;
             }else{
                 esAnterior = false;
             }
-        }else if(c.obtenerHora() > this.obtenerHora()){
+        }else if(c.obtenerHora() > obtenerHora()){
             esAnterior = true;
         }else{
             esAnterior = false;
