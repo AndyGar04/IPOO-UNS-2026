@@ -1,4 +1,4 @@
-# EJERCICIO 8. 
+# EJERCICIO 12. 
 ## Dada la instrucción “C v = new D(); ” donde D es una clase derivada de C, indique cuáles de las siguientes afirmaciones son correctas:
 ### a) Una clase abstracta puede no tener métodos abstractos.
 - Verdadero. En Java podés declarar una clase como abstract simplemente para evitar que sea instanciada (que se creen objetos directamente de ella), incluso si todos sus métodos tienen código implementado.
