@@ -42,14 +42,14 @@ public class Staff {
             }
         }
 
-        for(int i = posLibre; i < cant; i++){
+        for(int i = posLibres; i < cant; i++){
             s[i] = null;
         }
 
         cant = posLibres;
     }
 
-    public int estaLlena(){
+    public boolean estaLlena(){
         return cant == s.length;
     }
 

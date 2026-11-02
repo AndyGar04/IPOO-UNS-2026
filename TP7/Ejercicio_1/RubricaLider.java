@@ -1,4 +1,4 @@
-package TP6.Ejercicio_5;
+package TP7.Ejercicio_1;
 
 public class RubricaLider extends Rubrica{
     //<Atr Instancia>
