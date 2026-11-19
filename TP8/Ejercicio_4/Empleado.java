@@ -1,12 +1,10 @@
 package TP8.Ejercicio_4;
 
-import TP8.Ejercicio_3.Elemento;
-
 public class Empleado extends Elemento{
-    private int legajo;
-    private String nombre;
-    private int cantHoras;
-    private float valorHoras;
+    protected  int legajo;
+    protected String nombre;
+    protected int cantHoras;
+    protected float valorHoras;
 
     public Empleado(int leg, String nombre, int canth, float valorh){
         legajo = leg;
