@@ -4,9 +4,9 @@ public class Empleado extends Elemento{
     protected  int legajo;
     protected String nombre;
     protected int cantHoras;
-    protected float valorHoras;
+    protected double valorHoras;
 
-    public Empleado(int leg, String nombre, int canth, float valorh){
+    public Empleado(int leg, String nombre, int canth, double valorh){
         legajo = leg;
         this.nombre = nombre;
         cantHoras = canth;
@@ -18,7 +18,7 @@ public class Empleado extends Elemento{
     }
 
     /* • obtenerSueldo(): real. Computa la cantidad de horas por el valor de la hora.  */
-    public float obtenerSueldo(){
+    public double obtenerSueldo(){
         return cantHoras*valorHoras;
     }
 
@@ -26,7 +26,7 @@ public class Empleado extends Elemento{
         return cantHoras;
     }
 
-    public float obtenerValorHoras(){
+    public double obtenerValorHoras(){
         return valorHoras;
     }
 
